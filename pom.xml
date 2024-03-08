@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>dev.arsalaan</groupId>
-	<artifactId>word-square-api-2</artifactId>
+	<artifactId>word-square-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>word-square-api-2</name>
+	<name>word-square-api</name>
 	<description>Word Square Generator</description>
 	<properties>
 		<java.version>11</java.version>

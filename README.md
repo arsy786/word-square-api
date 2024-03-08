@@ -1,42 +1,80 @@
-## word-square-api-2
+# Word Square API
 
-<ins>App Info:
+## Application Information
 
-This application will generate a valid Word Square given:
-- the size of the grid (n)
-- the pool of characters to generate words from
+This Spring Boot application generates a valid Word Square given:
 
-<ins>Disclaimer:
+- The size of the grid (n).
+- A pool of characters to generate words from.
 
-NOTE: The characters provided in the pool MUST equal to the grid size squared (n<sup>2</sup>).
+### Disclaimer
 
-<ins>App Instructions:
+**Note:** The characters provided in the pool MUST be equal to the grid size squared (n²).
 
-Run the application either in the IDE (Run button), or in the command line using:
+## Prerequisites
 
-``` shell
-java -jar target/<jarFileName>.jar
+- Java Development Kit (JDK) 11 or newer.
+- Maven for building the project (optional if you use the Maven wrapper included in the project).
+- IDE of your choice (optional for running directly from the IDE).
+
+## Building the Application
+
+### Using Maven Wrapper
+
+Navigate to the project's root directory in your terminal and run:
+
+```bash
+./mvnw clean package
 ```
 
-Before running this command, ensure you are in the jar files working directory.
+This command compiles the application and packages it into a runnable .jar file located in the target directory.
 
-Use POSTMAN to make a POST request to the URI:
+If you have Maven installed globally, you can run:
 
-``` 
-http://localhost:8080/api/v2/wordsquare/
+```bash
+mvn clean package
 ```
 
-with a JSON body in the form of: 
-```
-{
-"gridSize": 4,
-"charPool": "aaccdeeeemmnnnoo"
-}
+After building the application, you can run it using the following command:
+
+```bash
+java -jar target/word-square-api-0.0.1-SNAPSHOT.jar
 ```
 
-OR
+## Using the API
 
-You can include the POST parameters in the URI:
-``` 
-http://localhost:8080/api/v2/wordsquare/7/aaaaaaaaabbeeeeeeedddddggmmlloooonnssssrrrruvvyyy
+### Making a POST Request
+
+You can use tools like Postman or curl to make a POST request to the application.
+
+Using Postman
+
+    Method: POST
+    URL: http://localhost:8080/api/v2/wordsquare/
+    Body (raw JSON):
+    {
+      "gridSize": 4,
+      "charPool": "aaccdeeeemmnnnoo"
+    }
+
+Using curl
+
+```bash
+curl -X POST -H "Content-Type: application/json" -d '{"gridSize": 4, "charPool": "aaccdeeeemmnnnoo"}' http://localhost:8080/api/v2/wordsquare/
 ```
+
+## Direct URL Access
+
+Alternatively, you can directly access the API using the following URL format:
+
+```bash
+[POST] http://localhost:8080/api/v2/wordsquare/{gridSize}/{charPool}
+```
+
+For example:
+
+```bash
+[POST] http://localhost:8080/api/v2/wordsquare/7/aaaaaaaaabbeeeeeeedddddggmmlloooonnssssrrrruvvyyy
+```
+
+This will return the generated word square based on the specified grid size and character pool.
