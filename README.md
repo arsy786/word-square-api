@@ -77,7 +77,7 @@ Using curl
 curl -X POST -H "Content-Type: application/json" -d '{"gridSize": 4, "charPool": "aaccdeeeemmnnnoo"}' http://localhost:8080/api/v2/wordsquare/
 ```
 
-## Direct URL Access
+### Direct URL Access
 
 Alternatively, you can directly access the API using the following URL format:
 
