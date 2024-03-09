@@ -1,7 +1,5 @@
 # Word Square API
 
-## Application Information
-
 This Spring Boot application generates a valid Word Square given:
 
 - The size of the grid (n).
@@ -43,7 +41,7 @@ This Spring Boot application generates a valid Word Square given:
    ./mvnw clean package
    ```
 
-This command compiles the application and packages it into a runnable .jar file located in the target directory.
+   This command compiles the application and packages it into a runnable .jar file located in the target directory.
 
 2. If you have Maven installed globally, you can run:
 
