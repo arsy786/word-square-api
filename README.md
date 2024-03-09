@@ -5,15 +5,15 @@ This Spring Boot application generates a valid Word Square given:
 - The size of the grid (n).
 - A pool of characters to generate words from.
 
-### Disclaimer
-
-**Note:** The characters provided in the pool MUST be equal to the grid size squared (n²).
+The characters provided in the pool MUST be equal to the grid size squared (n²).
 
 ## Prerequisites
 
+- Git
 - Java Development Kit (JDK) 11 or newer.
 - Maven for building the project (optional if you use the Maven wrapper included in the project).
 - IDE of your choice (optional for running directly from the IDE).
+- Postman (optional for making API calls)
 
 ## Building & Running the Application
 
