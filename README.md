@@ -17,29 +17,45 @@ This Spring Boot application generates a valid Word Square given:
 - Maven for building the project (optional if you use the Maven wrapper included in the project).
 - IDE of your choice (optional for running directly from the IDE).
 
-## Building the Application
+## Building & Running the Application
+
+### Cloning the Repository
+
+1. Open your terminal or command prompt.
+
+2. Clone the repository using Git:
+
+   ```bash
+   git clone https://github.com/arsy786/word-square-api.git
+   ```
+
+3. Navigate to the cloned repository's root directory:
+
+   ```bash
+   cd word-square-api
+   ```
 
 ### Using Maven Wrapper
 
-Navigate to the project's root directory in your terminal and run:
+1. Navigate to the project's root directory in your terminal and run:
 
-```bash
-./mvnw clean package
-```
+   ```bash
+   ./mvnw clean package
+   ```
 
 This command compiles the application and packages it into a runnable .jar file located in the target directory.
 
-If you have Maven installed globally, you can run:
+2. If you have Maven installed globally, you can run:
 
-```bash
-mvn clean package
-```
+   ```bash
+   mvn clean package
+   ```
 
-After building the application, you can run it using the following command:
+3. After building the application, you can run it using the following command:
 
-```bash
-java -jar target/word-square-api-0.0.1-SNAPSHOT.jar
-```
+   ```bash
+   java -jar target/word-square-api-0.0.1-SNAPSHOT.jar
+   ```
 
 ## Using the API
 
