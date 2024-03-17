@@ -71,11 +71,9 @@ The characters provided in the pool MUST be equal to the grid size squared (n²)
 
 ### Using the API
 
-#### Making a POST Request
+You can send a POST request through two methods: by specifying data in the request body or by embedding data in the path variables. Both methods generate a word square using the provided grid size and character pool.
 
-You can use tools like Postman or curl to make a POST request to the application.
-
-Using Postman
+<u>Request Body approach:</u>
 
     Method: POST
     URL: http://localhost:8080/api/v2/wordsquare/
@@ -85,24 +83,12 @@ Using Postman
       "charPool": "aaccdeeeemmnnnoo"
     }
 
-Using curl
+<u>Path Variable approach:</u>
 
 ```bash
-curl -X POST -H "Content-Type: application/json" -d '{"gridSize": 4, "charPool": "aaccdeeeemmnnnoo"}' http://localhost:8080/api/v2/wordsquare/
-```
-
-#### Direct URL Access
-
-Alternatively, you can directly access the API using the following URL format:
-
-```bash
+# Format
 [POST] http://localhost:8080/api/v2/wordsquare/{gridSize}/{charPool}
-```
 
-For example:
-
-```bash
+# Example
 [POST] http://localhost:8080/api/v2/wordsquare/7/aaaaaaaaabbeeeeeeedddddggmmlloooonnssssrrrruvvyyy
 ```
-
-This will return the generated word square based on the specified grid size and character pool.
