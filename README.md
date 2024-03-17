@@ -7,17 +7,17 @@ This Spring Boot application generates a valid Word Square given:
 
 The characters provided in the pool MUST be equal to the grid size squared (n²).
 
-## Prerequisites
+## Getting Started
+
+### Prerequisites
 
 - Git
-- Java Development Kit (JDK) 11 or newer.
-- Maven for building the project (optional if you use the Maven wrapper included in the project).
-- IDE of your choice (optional for running directly from the IDE).
+- Java 11
+- Maven (optional if you use the Maven wrapper included in the project)
+- IDE of your choice (optional for running directly from the IDE)
 - Postman (optional for making API calls)
 
-## Building & Running the Application
-
-### Cloning the Repository
+### Running the Application
 
 1. Open your terminal or command prompt.
 
@@ -33,31 +33,45 @@ The characters provided in the pool MUST be equal to the grid size squared (n²)
    cd word-square-api
    ```
 
-### Using Maven Wrapper
-
-1. Navigate to the project's root directory in your terminal and run:
+4. Run the following Maven command to build and start the service:
 
    ```bash
+   # For Maven
+   mvn spring-boot:run
+
+   # For Maven Wrapper (automatically uses the correct Maven version)
+   ./mvnw spring-boot:run
+   ```
+
+   This command compiles the application, starts the Spring Boot application, and deploys it on the embedded server. It's convenient during development for quick testing and debugging.
+
+   The application should now be running on `localhost:8080`.
+
+### Building the Application
+
+1. To build the application for deployment, run the following command:
+
+   ```bash
+   # For Maven
+   mvn clean package
+
+   # For Maven Wrapper
    ./mvnw clean package
    ```
 
-   This command compiles the application and packages it into a runnable .jar file located in the target directory.
+   This command compiles the application, runs any tests, and packages the compiled code into a runnable .jar file located in the target directory.
 
-2. If you have Maven installed globally, you can run:
-
-   ```bash
-   mvn clean package
-   ```
-
-3. After building the application, you can run it using the following command:
+2. After building the application, you can run it using the following command:
 
    ```bash
-   java -jar target/word-square-api-0.0.1-SNAPSHOT.jar
+   java -jar target/football-club-management-system-0.0.1-SNAPSHOT.jar
    ```
 
-## Using the API
+   This starts the Spring Boot application using the packaged .jar file. It's suitable for deploying or sharing the application in a production-like environment.
 
-### Making a POST Request
+### Using the API
+
+#### Making a POST Request
 
 You can use tools like Postman or curl to make a POST request to the application.
 
@@ -77,7 +91,7 @@ Using curl
 curl -X POST -H "Content-Type: application/json" -d '{"gridSize": 4, "charPool": "aaccdeeeemmnnnoo"}' http://localhost:8080/api/v2/wordsquare/
 ```
 
-### Direct URL Access
+#### Direct URL Access
 
 Alternatively, you can directly access the API using the following URL format:
 
