@@ -73,7 +73,7 @@ The characters provided in the pool MUST be equal to the grid size squared (n²)
 
 You can send a POST request through two methods: by specifying data in the request body or by embedding data in the path variables. Both methods generate a word square using the provided grid size and character pool.
 
-<u>Request Body approach:</u>
+<ins>Request Body approach:</ins>
 
     Method: POST
     URL: http://localhost:8080/api/v2/wordsquare/
@@ -83,7 +83,7 @@ You can send a POST request through two methods: by specifying data in the reque
       "charPool": "aaccdeeeemmnnnoo"
     }
 
-<u>Path Variable approach:</u>
+<ins>Path Variable approach:</ins>
 
 ```bash
 # Format
