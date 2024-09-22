@@ -64,7 +64,7 @@ The characters provided in the pool MUST be equal to the grid size squared (n²)
 2. After building the application, you can run it using the following command:
 
    ```bash
-   java -jar target/football-club-management-system-0.0.1-SNAPSHOT.jar
+   java -jar target/word-square-api-0.0.1-SNAPSHOT.jar
    ```
 
    This starts the Spring Boot application using the packaged .jar file. It's suitable for deploying or sharing the application in a production-like environment.
